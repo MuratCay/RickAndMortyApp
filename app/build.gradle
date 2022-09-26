@@ -20,7 +20,15 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://rickandmortyapi.com/api/\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
         release {
+            buildConfigField "String", "BASE_URL", "\"https://rickandmortyapi.com/api/\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
