@@ -18,7 +18,7 @@ object RoomModule {
 
     @Provides
     @Singleton
-    fun movieDatabase(@ApplicationContext context: Context): RickAndMortyDatabase =
+    fun rickAndMortyDatabase(@ApplicationContext context: Context): RickAndMortyDatabase =
         Room.databaseBuilder(context, RickAndMortyDatabase::class.java, DATABASE_NAME)
             .fallbackToDestructiveMigration()
             .build()
